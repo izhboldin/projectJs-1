@@ -335,6 +335,7 @@ function changeLanguage() {
         hash = hash.slice(1);
         if (!allLang.includes(hash)) {
             location.href = window.location.pathname + '#en'
+            location.reload();
         }
         selectLang.value = hash;
         showLanguage(hash);
