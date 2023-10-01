@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    /* background-color: #FFFFCC; */
+}
+
+.titleH1 {
+    padding: 5px 0;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.comments {
+    display: flex;
+    width: 100%;
+}
+
+.addCommet {
+    width: 50%;
+}
+
+#comment-field {
+    max-height: 800px;
+    overflow-y: auto;
+}
+
+.formComment {
+    width: 50%;
+}
+
+.formComment form {
+    padding: 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formComment label,
+.comment-searh label,
+.comment-select-sort label {
+    padding: 10px 0;
+}
+
+.formComment input,
+.comment-searh input,
+.formComment select,
+.comment-select-sort select,
+#select-lang {
+    font-family: 'Ubuntu', sans-serif;
+    outline: none;
+    font-size: 16px;
+    padding: 14px 10px;
+    margin-bottom: 10px;
+    height: 32px;
+    border: 1px solid #c8c8c8;
+    border-radius: 6px;
+}
+
+input:focus,
+select:focus {
+    box-shadow: 0px 0px 1px 4px rgba(255, 255, 0, 0.5);
+}
+
+.formComment select,
+.comment-select-sort select,
+#select-lang {
+    width: 150px;
+    padding: 6px;
+}
+
+button {
+    border: none;
+}
+
+.formComment button {
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 6px;
+    padding: 0 16px;
+    height: 32px;
+    background-color: #FAFA37;
+    font-size: 16px;
+    margin: 10px 20px 0 0;
+}
+
+.formComment button:hover,
+.btn-edit:hover {
+    background-color: #efef35;
+}
+
+.formComment button:active,
+.btn-edit:active {
+    background-color: #e6e632;
+}
+
+
+.flex-justify-cont- {
+    display: flex;
+    justify-content: left;
+}
+
+.flex-dir-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-justify-cont-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.border-danger {
+    border-color: #a00000 !important;
+
+}
+
+.danger-p {
+    font-size: 14px;
+    color: #a00000;
+    margin-top: 5px;
+    position: absolute;
+}
+
+.btn-remove,
+.btn-edit {
+    font-size: 14px;
+    color: #f9f99f;
+    padding: 6px;
+    background-color: #e92c2c;
+    border-radius: 6px;
+}
+
+.btn-edit {
+    color: #000;
+    background-color: #FAFA37;
+    border: 1px solid #ecec01;
+}
+
+.btn-remove:hover {
+    background-color: #dc1c1c;
+
+}
+
+.btn-remove:active {
+    background-color: #cd1d1d;
+}
+
+.disp-none {
+    display: none;
+}
+
+.header .container{
+    position: relative;
+}
+
+#select-lang {
+    position: absolute;
+    right: 0;
+    top: 16px;
+    width: 60px;
+    
+}
