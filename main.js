@@ -29,7 +29,7 @@ async function forRandomImageDog() {
 
 async function forRandomComment() {
     try {
-        // const response = await fetch('https://cors-anywhere.herokuapp.com/https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=ru');
+        const response = await fetch('https://cors-anywhere.herokuapp.com/https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=ru');
         const data = await response.json();
         return data
 
