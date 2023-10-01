@@ -9,11 +9,11 @@ const timeConverter = UNIX_timestamp => {
 
     return `${day}.${month}.${year} ${hours}:${minutes}:${seconds}`;
 }
-const svgEdit = `<svg class="btn-editSvg" style="width: 14px; height: 14px;" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="m4.5,1h5.515c.334,0,.663.03.985.088v5.412c0,1.378,1.122,2.5,2.5,2.5h5.411c.033.178.057.359.071.541.022.275.274.479.539.458.275-.022.48-.264.458-.539-.125-1.536-.793-2.981-1.883-4.07l-3.485-3.485c-1.228-1.228-2.86-1.904-4.596-1.904h-5.515C2.019,0,0,2.019,0,4.5v15c0,2.481,2.019,4.5,4.5,4.5h4c.276,0,.5-.224.5-.5s-.224-.5-.5-.5h-4c-1.93,0-3.5-1.57-3.5-3.5V4.5c0-1.93,1.57-3.5,3.5-3.5Zm12.889,5.096c.545.545.965,1.195,1.24,1.904h-5.129c-.827,0-1.5-.673-1.5-1.5V1.368c.706.273,1.353.692,1.904,1.243l3.485,3.485Zm5.878,5.636c-.943-.944-2.592-.944-3.535,0l-7.707,7.707c-.661.661-1.025,1.54-1.025,2.475v1.586c0,.276.224.5.5.5h1.586c.935,0,1.814-.364,2.475-1.025l7.707-7.707c.472-.472.732-1.1.732-1.768s-.26-1.296-.732-1.768Zm-.707,2.828l-7.707,7.707c-.472.472-1.1.732-1.768.732h-1.086v-1.086c0-.668.26-1.295.732-1.768l7.707-7.707c.566-.566,1.555-.566,2.121,0,.283.283.439.66.439,1.061s-.156.777-.439,1.061Z"/></svg>;
- `
+const svgEdit = `<svg class="btn-editSvg" style="width: 14px; height: 14px;" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="m4.5,1h5.515c.334,0,.663.03.985.088v5.412c0,1.378,1.122,2.5,2.5,2.5h5.411c.033.178.057.359.071.541.022.275.274.479.539.458.275-.022.48-.264.458-.539-.125-1.536-.793-2.981-1.883-4.07l-3.485-3.485c-1.228-1.228-2.86-1.904-4.596-1.904h-5.515C2.019,0,0,2.019,0,4.5v15c0,2.481,2.019,4.5,4.5,4.5h4c.276,0,.5-.224.5-.5s-.224-.5-.5-.5h-4c-1.93,0-3.5-1.57-3.5-3.5V4.5c0-1.93,1.57-3.5,3.5-3.5Zm12.889,5.096c.545.545.965,1.195,1.24,1.904h-5.129c-.827,0-1.5-.673-1.5-1.5V1.368c.706.273,1.353.692,1.904,1.243l3.485,3.485Zm5.878,5.636c-.943-.944-2.592-.944-3.535,0l-7.707,7.707c-.661.661-1.025,1.54-1.025,2.475v1.586c0,.276.224.5.5.5h1.586c.935,0,1.814-.364,2.475-1.025l7.707-7.707c.472-.472.732-1.1.732-1.768s-.26-1.296-.732-1.768Zm-.707,2.828l-7.707,7.707c-.472.472-1.1.732-1.768.732h-1.086v-1.086c0-.668.26-1.295.732-1.768l7.707-7.707c.566-.566,1.555-.566,2.121,0,.283.283.439.66.439,1.061s-.156.777-.439,1.061Z"/></svg>
+ `;
 
-const svgRemove = `<svg class="btn-removeSvg" style="width: 14px; height: 14px;" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M23.85,16.85l-3.15,3.16,3.15,3.13c.2,.19,.2,.51,0,.71-.1,.1-.23,.15-.35,.15s-.25-.05-.35-.15l-3.15-3.13-3.11,3.13c-.1,.1-.23,.15-.35,.15s-.25-.05-.35-.15c-.2-.19-.2-.51,0-.71l3.11-3.13-3.15-3.13c-.2-.19-.2-.51,0-.71,.2-.2,.51-.2,.71,0l3.15,3.13,3.15-3.16c.2-.2,.51-.2,.71,0,.2,.19,.2,.51,0,.71Zm.15-9.35v6c0,.28-.22,.5-.5,.5s-.5-.22-.5-.5v-5.5H1v10.5c0,1.93,1.57,3.5,3.5,3.5H13.5c.28,0,.5,.22,.5,.5s-.22,.5-.5,.5H4.5c-2.48,0-4.5-2.02-4.5-4.5V5.5C0,3.02,2.02,1,4.5,1h3.03c.39,0,.77,.09,1.12,.26l3.16,1.58c.21,.1,.44,.16,.67,.16h7.03c2.48,0,4.5,2.02,4.5,4.5ZM1,7H22.96c-.24-1.69-1.7-3-3.46-3h-7.03c-.39,0-.77-.09-1.12-.26l-3.16-1.58c-.21-.1-.44-.16-.67-.16h-3.03c-1.93,0-3.5,1.57-3.5,3.5v1.5Z"/></svg>;
- `
+const svgRemove = `<svg class="btn-removeSvg" style="width: 14px; height: 14px;" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M23.85,16.85l-3.15,3.16,3.15,3.13c.2,.19,.2,.51,0,.71-.1,.1-.23,.15-.35,.15s-.25-.05-.35-.15l-3.15-3.13-3.11,3.13c-.1,.1-.23,.15-.35,.15s-.25-.05-.35-.15c-.2-.19-.2-.51,0-.71l3.11-3.13-3.15-3.13c-.2-.19-.2-.51,0-.71,.2-.2,.51-.2,.71,0l3.15,3.13,3.15-3.16c.2-.2,.51-.2,.71,0,.2,.19,.2,.51,0,.71Zm.15-9.35v6c0,.28-.22,.5-.5,.5s-.5-.22-.5-.5v-5.5H1v10.5c0,1.93,1.57,3.5,3.5,3.5H13.5c.28,0,.5,.22,.5,.5s-.22,.5-.5,.5H4.5c-2.48,0-4.5-2.02-4.5-4.5V5.5C0,3.02,2.02,1,4.5,1h3.03c.39,0,.77,.09,1.12,.26l3.16,1.58c.21,.1,.44,.16,.67,.16h7.03c2.48,0,4.5,2.02,4.5,4.5ZM1,7H22.96c-.24-1.69-1.7-3-3.46-3h-7.03c-.39,0-.77-.09-1.12-.26l-3.16-1.58c-.21-.1-.44-.16-.67-.16h-3.03c-1.93,0-3.5,1.57-3.5,3.5v1.5Z"/></svg>
+ `;
 
 async function forRandomImageDog() {
     try {
@@ -55,12 +55,10 @@ const commentFilter = document.getElementById('comment-select-sort');
 const selectLang = document.getElementById('select-lang');
 const commentField = document.getElementById('comment-field');
 
-
 commentAddGenerBtn.addEventListener('click', async (event) => {
     event.preventDefault();
     let quote = await forRandomComment();
     let imagePat = await forRandomImageDog();
-    console.log(quote);
     const comment = {
         name: quote.quoteAuthor.trim(),
         body: quote.quoteText.trim(),
@@ -125,7 +123,6 @@ commentField.addEventListener('click', (event) => {
     }
 });
 
-
 const editComment = (element, index) => {
     element.classList.add('disp-none');
     commentAddBtn.classList.add('disp-none');
@@ -164,8 +161,6 @@ const editComment = (element, index) => {
         showLanguage(savedLang);
     };
 }
-
-// .splice(0,6)
 
 const showComments = comments => {
     let out = '';
@@ -214,7 +209,6 @@ const examFieldsError = comment => {
         fieldsError(commentType);
     }
 }
-
 
 const fieldsError = field => {
     field.classList.add('position-relative', 'border-danger');
@@ -276,7 +270,7 @@ const noComment = () => {
 
 noComment();
 
-selectLang.addEventListener('change', function () {
+selectLang.addEventListener('change',() => {
     const lang = selectLang.value;
     const expires = new Date();
     expires.setTime(expires.getTime() + 30 * 24 * 60 * 60 * 1000);
@@ -284,13 +278,13 @@ selectLang.addEventListener('change', function () {
     changeURLLanguage();
 });
 
-function changeURLLanguage() {
+const changeURLLanguage = () => {
     const lang = selectLang.value;
     location.href = window.location.pathname + '#' + lang;
     location.reload();
 }
 
-function getCookie(name) {
+const getCookie = (name) => {
     const cookies = document.cookie.split('; ');
     for (let i = 0; i < cookies.length; i++) {
         const cookie = cookies[i].split('=');
@@ -322,7 +316,7 @@ const showLanguage = (hash) => {
     }
 }
 
-function changeLanguage() {
+const  changeLanguage = () => {
     if (savedLang) {
         if (!allLang.includes(savedLang)) {
             location.href = window.location.pathname + '#' + savedLang;
@@ -341,8 +335,5 @@ function changeLanguage() {
         showLanguage(hash);
     }
 }
-
-
-
 
 changeLanguage();
