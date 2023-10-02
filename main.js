@@ -26,7 +26,7 @@ const svgRemove = `<svg class="btn-removeSvg" style="width: 14px; height: 14px;"
     return null;
 }
 
-const savedLang = getCookie('saveLng');
+let savedLang = getCookie('saveLng');
 
 async function forRandomImageDog() {
     try {
@@ -267,7 +267,6 @@ commentSearch.oninput = function () {
             noComment();
 
         }
-        showLanguage(savedLang);
     });
     showLanguage(savedLang);
 }
@@ -337,6 +336,7 @@ const  changeLanguage = () => {
             location.href = window.location.pathname + '#en';
             location.reload();
         }
+        savedLang = hash
         selectLang.value = hash;
         showLanguage(hash);
     }
