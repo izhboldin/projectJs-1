@@ -15,6 +15,19 @@ const svgEdit = `<svg class="btn-editSvg" style="width: 14px; height: 14px;" xml
 const svgRemove = `<svg class="btn-removeSvg" style="width: 14px; height: 14px;" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M23.85,16.85l-3.15,3.16,3.15,3.13c.2,.19,.2,.51,0,.71-.1,.1-.23,.15-.35,.15s-.25-.05-.35-.15l-3.15-3.13-3.11,3.13c-.1,.1-.23,.15-.35,.15s-.25-.05-.35-.15c-.2-.19-.2-.51,0-.71l3.11-3.13-3.15-3.13c-.2-.19-.2-.51,0-.71,.2-.2,.51-.2,.71,0l3.15,3.13,3.15-3.16c.2-.2,.51-.2,.71,0,.2,.19,.2,.51,0,.71Zm.15-9.35v6c0,.28-.22,.5-.5,.5s-.5-.22-.5-.5v-5.5H1v10.5c0,1.93,1.57,3.5,3.5,3.5H13.5c.28,0,.5,.22,.5,.5s-.22,.5-.5,.5H4.5c-2.48,0-4.5-2.02-4.5-4.5V5.5C0,3.02,2.02,1,4.5,1h3.03c.39,0,.77,.09,1.12,.26l3.16,1.58c.21,.1,.44,.16,.67,.16h7.03c2.48,0,4.5,2.02,4.5,4.5ZM1,7H22.96c-.24-1.69-1.7-3-3.46-3h-7.03c-.39,0-.77-.09-1.12-.26l-3.16-1.58c-.21-.1-.44-.16-.67-.16h-3.03c-1.93,0-3.5,1.57-3.5,3.5v1.5Z"/></svg>
  `;
 
+ const getCookie = (name) => {
+    const cookies = document.cookie.split('; ');
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].split('=');
+        if (cookie[0] === name) {
+            return cookie[1];
+        }
+    }
+    return null;
+}
+
+const savedLang = getCookie('saveLng');
+
 async function forRandomImageDog() {
     try {
         const response = await fetch('https://dog.ceo/api/breeds/image/random');
@@ -150,14 +163,14 @@ const editComment = (element, index) => {
         comments[index].name = commentName.value.trim();
         comments[index].body = commentBody.value.trim();
         comments[index].type = commentType.value.trim();
-
-        commentAddBtn.classList.remove('disp-none');
-        commentAddGenerBtn.classList.remove('disp-none');
-        commentUpdateBtn.classList.add('disp-none');
         if (comments[index].name === '' || comments[index].body === '' || comments[index].type === 'Choose...') {
             examFieldsError(comments[index]);
             return;
         }
+
+        commentAddBtn.classList.remove('disp-none');
+        commentAddGenerBtn.classList.remove('disp-none');
+        commentUpdateBtn.classList.add('disp-none');
         cleanForm();
         saveComments();
         showComments(comments);
@@ -290,20 +303,6 @@ const changeURLLanguage = () => {
     location.reload();
 }
 
-const getCookie = (name) => {
-    const cookies = document.cookie.split('; ');
-    for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i].split('=');
-        if (cookie[0] === name) {
-            return cookie[1];
-        }
-    }
-    return null;
-}
-
-const savedLang = getCookie('saveLng');
-
-
 const showLanguage = (hash) => {
     for (let key in langArr['text']) {
         document.querySelector('.lng-' + key).innerHTML = langArr['text'][key][hash];
@@ -342,5 +341,4 @@ const  changeLanguage = () => {
         showLanguage(hash);
     }
 }
-
 changeLanguage();
