@@ -55,6 +55,7 @@ const commentFilter = document.getElementById('comment-select-sort');
 const selectLang = document.getElementById('select-lang');
 const commentField = document.getElementById('comment-field');
 
+
 commentAddGenerBtn.addEventListener('click', async (event) => {
     event.preventDefault();
     let quote = await forRandomComment();
@@ -92,6 +93,7 @@ commentAddBtn.addEventListener('click', async (event) => {
         examFieldsError(comment);
         return;
     }
+    console.log(comment.name.value);
     cleanForm();
     comments.push(comment);
     saveComments();
@@ -123,6 +125,7 @@ commentField.addEventListener('click', (event) => {
     }
 });
 
+
 const editComment = (element, index) => {
     element.classList.add('disp-none');
     commentAddBtn.classList.add('disp-none');
@@ -131,7 +134,7 @@ const editComment = (element, index) => {
     commentName.value = `${element.querySelector('.existing-name-comment').innerText}`;
     commentBody.value = `${element.querySelector('.existing-body-comment').innerText}`;
     commentType.value = comments[index].type;
-    
+
     document.querySelectorAll('.btn-edit').forEach(btn => {
         btn.setAttribute('disabled', '');
         btn.style.backgroundColor = 'gray';
@@ -161,6 +164,8 @@ const editComment = (element, index) => {
         showLanguage(savedLang);
     };
 }
+
+// .splice(0,6)
 
 const showComments = comments => {
     let out = '';
@@ -209,6 +214,7 @@ const examFieldsError = comment => {
         fieldsError(commentType);
     }
 }
+
 
 const fieldsError = field => {
     field.classList.add('position-relative', 'border-danger');
@@ -296,6 +302,7 @@ const getCookie = (name) => {
 }
 
 const savedLang = getCookie('saveLng');
+
 
 const showLanguage = (hash) => {
     for (let key in langArr['text']) {
