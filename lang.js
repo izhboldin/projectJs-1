@@ -80,8 +80,8 @@ const langArr = {
             'en': 'Enter name user',
         },
         'input-name': {
-            'ua': "Твоє ім'я",
-            'en': 'Your name',
+            'ua': "Твоє ім'я (Не більше 30 символів)",
+            'en': 'Your name (No more than 30 characters)',
         },
         'input-comment': {
             'ua': 'Ваш коментар',
