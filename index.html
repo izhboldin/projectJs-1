@@ -26,18 +26,50 @@
     <main>
         <div class="container">
             <div class="comments">
+                <div class="formComment">
+                    <form action="">
+                        <div class="flex-justify-cont-space-between">
+                            <div class="flex-dir-column">
+                                <label class="lng-label-name" for="comment-name">Name:</label>
+                                <input class="lng-input-name" type="text" id="comment-name" maxlength="30"
+                                    placeholder="Your name (No more than 30 characters)" autocomplete="off">
+                            </div>
+                            <div class="flex-dir-column">
+                                <label class="lng-label-type" for="comment-select">Type comments:</label>
+                                <select id="comment-select">
+                                    <option class="lng-option-type1-2" value="Choose..." selected>Choose...</option>
+                                    <option class="lng-option-type2-2" value="entertaining">entertaining</option>
+                                    <option class="lng-option-type3-2" value="informative">informative</option>
+                                    <option class="lng-option-type4-2" value="quote">quote</option>
+                                    <option class="lng-option-type5-2" value="other">other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <label class="lng-label-comment" for="comment-body">Comment:</label>
+                        <input class="lng-input-comment" type="text" id="comment-body" placeholder="Your comment"
+                            autocomplete="off">
+                        <div class="flex-justify-cont-">
+                            <button class="lng-add-comment" type="submit" id="comment-add">add comment</button>
+                            <button class="lng-gener-comment" type="submit" id="comment-generation-add">generation
+                                comment</button>
+                            <button class="lng-update-comment disp-none" type="submit" id="comment-update">update
+                                comment</button>
+                        </div>
+                    </form>
+                </div>
                 <div class="addCommet">
                     <div class="flex-justify-cont-space-between">
                         <div class="flex-dir-column comment-searh">
                             <label class="lng-label-search-name" for="comment-search">Name user:</label>
-                            <input class="lng-input-search-name" type="text" id="comment-search" placeholder="Enter name user">
+                            <input class="lng-input-search-name" type="text" id="comment-search"
+                                placeholder="Enter name user">
                         </div>
                         <div class="flex-dir-column  comment-select-sort">
                             <label class="lng-label-type" for="comment-select-sort">Type comments:</label>
                             <select id="comment-select-sort">
                                 <option class="lng-option-type1-1" value="">All</option>
                                 <option class="lng-option-type2-1" value="entertaining">entertaining</option>
-                                <option class="lng-option-type3-1" value="informativ">informative</option>
+                                <option class="lng-option-type3-1" value="informative">informative</option>
                                 <option class="lng-option-type4-1" value="quote">quote</option>
                                 <option class="lng-option-type5-1" value="other">other</option>
                             </select>
@@ -45,33 +77,6 @@
                     </div>
                     <div id="comment-field">
                     </div>
-                </div>
-                <div class="formComment">
-                    <form action="">
-                        <div class="flex-justify-cont-space-between">
-                            <div class="flex-dir-column">
-                                <label class="lng-label-name" for="comment-name">Name:</label>
-                                <input class="lng-input-name" type="text" id="comment-name" placeholder="Your name" autocomplete="off">
-                            </div>
-                            <div class="flex-dir-column">
-                                <label class="lng-label-type" for="comment-select">Type comments:</label>
-                                <select id="comment-select">
-                                    <option class="lng-option-type1-2" value="Choose..." selected>Choose...</option>
-                                    <option class="lng-option-type2-2" value="entertaining">entertaining</option>
-                                    <option class="lng-option-type3-2" value="informativ">informative</option>
-                                    <option class="lng-option-type4-2" value="quote">quote</option>
-                                    <option class="lng-option-type5-2" value="other">other</option>
-                                </select>
-                            </div>
-                        </div>
-                        <label class="lng-label-comment" for="comment-body">Comment:</label>
-                        <input class="lng-input-comment" type="text" id="comment-body" placeholder="Your comment" autocomplete="off">
-                        <div class="flex-justify-cont-">
-                            <button class="lng-add-comment" type="submit" id="comment-add">add comment</button>
-                            <button class="lng-gener-comment" type="submit" id="comment-generation-add">generation comment</button>
-                            <button class="lng-update-comment disp-none" type="submit" id="comment-update">update comment</button>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
