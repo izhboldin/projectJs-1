@@ -277,7 +277,7 @@ const noComment = () => {
         document.getElementById('no-comments').remove();
     }
     if (commentField.offsetHeight === 0) {
-        if (savedLang === 'en') {
+        if (savedLang === 'en' ||selectLang.value === 'en') {
             commentField.innerHTML += '<h2 id="no-comments" style="text-align: center;">No comments</h2>';
         }
         else {
