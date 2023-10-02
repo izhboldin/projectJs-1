@@ -28,7 +28,7 @@ body {
 }
 
 .addCommet {
-    width: 50%;
+    width: 55%;
 }
 
 #comment-field {
@@ -37,7 +37,7 @@ body {
 }
 
 .formComment {
-    width: 50%;
+    width: 45%;
 }
 
 .formComment form {
@@ -70,6 +70,14 @@ body {
 input:focus,
 select:focus {
     box-shadow: 0px 0px 1px 4px rgba(255, 255, 0, 0.5);
+}
+
+input::placeholder {
+    font-size: 15px;
+}
+
+#comment-name {
+    width: 295px;
 }
 
 .formComment select,
